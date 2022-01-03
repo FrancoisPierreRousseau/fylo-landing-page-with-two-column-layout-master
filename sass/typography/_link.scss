@@ -1,0 +1,42 @@
+@use "sass:map";
+
+@use "../settings/global";
+
+
+// BLOCK
+.link-icon {
+  display: inline-block;
+  height: 1.8em;
+  width: 1.8em;
+  text-align: center;
+  position: relative;
+}
+
+.link-icon > svg,
+.link-icon > img{
+  transition: fill 0.25s ease-out;
+  font-size: 1.1rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.link-icon--outline {
+  outline: solid .1em hsl(193, 100%, 96%);
+  transition: outline 0.25s ease-out;
+}
+
+// ACTIVE STATES DES LINKS ICONS
+.link-icon--neutral-blue:hover > svg,
+.link-icon--neutral-blue:focus > svg {
+  fill: map.get(global.$palette, "neutral", "blue", color);
+}
+
+.link-icon--neutral-blue > svg {
+  fill: hsl(193, 100%, 96%);
+}
+
+
+.link-icon--outline:hover,
+.link-icon--outline:focus {
+  outline: solid .1rem map.get(global.$palette, "neutral", "blue", color);
+}

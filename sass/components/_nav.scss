@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: .75rem;
+  align-items: center;
+}
+
+.nav-brand {
+  width: 6rem;
+}
+
+.nav-brand-big{
+  max-width: 10rem;
+}
+
+@media (min-width: 950px) {
+  .nav-brand {
+    width: 9rem;
+  }
+}

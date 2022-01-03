@@ -1,0 +1,29 @@
+@use "sass:map";
+
+@use "../settings/global";
+
+.form-control{
+  display: block;
+  width: 100%;
+  padding: 1rem .98rem;
+  border-radius: global.$radius;
+  font-size: global.$font-size;
+  border: .083rem solid map.get(global.$palette, "primary", "dark", color);
+  background-clip: padding-box;
+  background-color: white;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .075);
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-control ~ .invalid-feedback {
+  display: none;
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.form-control:focus:invalid ~ .invalid-feedback{
+  display: block;
+  margin-top: .25rem;
+}
+
+

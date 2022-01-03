@@ -1,0 +1,26 @@
+@use "../settings/card";
+
+/*-------------------------------------------------*\
+  #COMPONENTS-CARD-BLOCK
+  ---------------------------------------------------
+  Application de la structure global des cards
+\*---------------------------------------------------*/
+
+/*
+ * Structure principale des cards par défaut
+ */
+.card {
+  background: card.$background;
+  border-radius: card.$radius;
+  padding: card.$padding;
+  box-shadow: card.$shadow;
+  margin: card.$margin;
+  color: card.$font-color;
+}
+
+
+
+
+
+
+

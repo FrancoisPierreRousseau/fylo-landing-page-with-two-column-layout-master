@@ -1,0 +1,8 @@
+.have-quote:before {
+  content: '“';
+  top: -.5rem;
+  left: 2.75rem;
+  position: absolute;
+  font-size: 4rem;
+  font-family: 'Raleway', sans-serif;
+}

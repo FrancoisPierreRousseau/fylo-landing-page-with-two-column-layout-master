@@ -1,0 +1,83 @@
+@use "sass:map";
+
+@use "../settings/button";
+@use "../settings/global";
+
+/*------------------------------------*\
+  #COMPONENTS-BUTTON-BLOCK
+  Block de la méthodologie du B de BEM
+\*------------------------------------*/
+
+/*
+ * Structure principale des boutons par défaut
+ */
+.button {
+  border-radius: button.$radius;
+  margin: button.$margin;
+  padding: button.$padding;
+  vertical-align: middle;
+  border: button.$border;
+  transition: button.$transition;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1;
+  font-size: button.$size;
+  font-weight: button.$font-weight;
+  box-shadow: button.$shadow;
+  background: white;
+}
+.button--small {
+  padding: button.$padding-small;
+}
+
+
+/*------------------------------------*\
+  #COMPONENTS-BUTTON-STATES
+\*------------------------------------*/
+
+/*
+ * États par défaut en mode désactivés des boutons
+ */
+.button.disabled, .button[disabled],
+.button.disabled:hover, .button[disabled]:hover,
+.button.disabled:focus, .button[disabled]:focus {
+  background-color: button.$background;
+  color: button.$color;
+}
+
+/*
+ * États de survole des boutons
+ */
+.button:hover,
+.button:focus {
+  color: map.get(global.$palette, "gray", "blue", color);
+}
+
+/*------------------------------------------*\
+  #COMPONENTS-BUTTON-MODIFIER
+  Modifier du M de BEM
+\*------------------------------------------*/
+
+/*
+ * Modifie la couleur de la font et du background des boutons avec une couleur primaire
+ */
+.button--primary {
+  background: button.$primary-background;
+  color: button.$color;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  opacity: .7;
+  color: map.get(global.$palette, "neutral", "light", color);
+}
+
+
+.button--success-sub-border{
+  background: transparent;
+  border-bottom: .093rem solid #198754;
+  color: #198754;
+  box-shadow: none;
+  padding: 0 0 .5em;
+  font-weight: 400;
+}
