@@ -103,7 +103,7 @@
 \*----------------------------------------------------*/
 html {
   box-sizing: border-box;
-  font-size: 75%;
+  font-size: 100%;
 }
 
 /*
@@ -8699,7 +8699,7 @@ a img {
   width: 100%;
   padding: 1rem 0.98rem;
   border-radius: 0.25rem;
-  font-size: 75%;
+  font-size: 100%;
   border: 0.083rem solid #070439;
   background-clip: padding-box;
   background-color: white;
